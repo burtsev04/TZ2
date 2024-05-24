@@ -31,3 +31,13 @@ jobs:
       run: mvn -B package --file pom.xml
 
 
+
+  send_notification:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Send Slack
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.NOTIFY }}  
+        run: |
+          curl -X POST -H 'Content-type: application/json' --data '{"text":"все ок"}' $SLACK_WEBHOOK_URL
