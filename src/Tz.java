@@ -13,15 +13,15 @@ public class Main {
             BigInteger max = _max(cisla);
             BigInteger sum = _sum(cisla);
             BigInteger mult = _mult(cisla);
-            System.out.println("Минимальное: " + min);
-            System.out.println("Максимальное: " + max);
-            System.out.println("Сумма: " + sum);
-            System.out.println("Произведение: " + mult);
+            System.out.printl(min);
+            System.out.println(max);
+            System.out.println(sum);
+            System.out.println(mult);
         } catch (IOException e) {
-            System.err.println("Ошибка ввода-вывода при работе с файлом.");
+
             e.printStackTrace();
         } catch (NumberFormatException e) {
-            System.err.println("Файл содержит некорректные данные.");
+
             e.printStackTrace();
         }
     }
@@ -34,10 +34,10 @@ public class Main {
             try {
                 cisla.add(new BigInteger(token));
             } catch (NumberFormatException e) {
-                System.err.println("Неправильное число в файле: " + token);
+                System.err.println(token);
             }
         }
-        scan.close();  // Закрытие сканера
+        
         return cisla;
     }
 
