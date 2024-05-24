@@ -38,6 +38,6 @@ jobs:
     steps:
       - name: Send Slack
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.NOTIFY }}  
+          SLACK_WEBHOOK_URL: ${{ secrets.SLK }}  
         run: |
           curl -X POST -H 'Content-type: application/json' --data '{"text":"все ок"}' $SLACK_WEBHOOK_URL
