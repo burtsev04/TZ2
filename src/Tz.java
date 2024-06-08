@@ -13,7 +13,7 @@ public class Main {
             BigInteger max = _max(cisla);
             BigInteger sum = _sum(cisla);
             BigInteger mult = _mult(cisla);
-            System.out.printl(min);
+            System.out.println(min);
             System.out.println(max);
             System.out.println(sum);
             System.out.println(mult);
